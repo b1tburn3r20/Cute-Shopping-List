@@ -16,6 +16,8 @@ input{
     text-align: center;
     font-size: 1rem;
     font-weight: bold;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+
 }
 button {
     color: #FDFDFD;
@@ -30,9 +32,12 @@ button {
     justify-content: center;
     font-size: 1rem;
     font-weight: bold;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+
 }
 img{
     width: 100%;
+    
 }
 .container{
     border: .2vw solid black;
@@ -40,16 +45,29 @@ img{
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    max-width: 300px;
+    max-width: 350px;
     justify-content: center;
     text-align: center;
     align-items: center;
     margin: 0 auto;
     background-color: white;
 }
+#shopping-list{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: white;
+    margin-top: 1vh;
+    gap: .5rem;
+    padding: 0;
+justify-content: center;}
 .shopping-list-item{
     font-weight: bold;
-    background-color: white;
+    background-color: DCE1EB;
+    border-radius: 1vh;
     padding: .5rem;
     color: #2f2f2f;
+    text-decoration: none;
+    list-style: none;
+    box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+    flex-grow: 1;
 }
