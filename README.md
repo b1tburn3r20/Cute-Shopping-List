@@ -17,7 +17,7 @@ Welcome to the Peach and Goma Shopping Cart mobile app! This simple and cute sho
 ## Live Demo
 
 ![Peach from Peach and Goma](https://i.imgur.com/9vmf6St.png)
-Check out the live demo of the Teal Lollipop Shopping Cart app [here](https://6532fe3aa3bdb7290fd2d63c--teal-lollipop-e84741.netlify.app).
+Check out the live demo of the Peach and Goma Shopping Cart app [here](https://6532fe3aa3bdb7290fd2d63c--teal-lollipop-e84741.netlify.app).
 
 Happy Shopping! 🛒🍭
 

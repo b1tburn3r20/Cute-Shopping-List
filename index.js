@@ -1,7 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
 import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+
 const appSettings = {
-    databaseURL: "https://practice-project-67991-default-rtdb.firebaseio.com/"
+    databaseURL: ""
 }
 
 const app =  initializeApp(appSettings)
