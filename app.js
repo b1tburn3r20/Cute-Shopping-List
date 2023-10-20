@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"
-import { getDatabase, ref, push, onValue } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
+import { getDatabase, ref, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 const appSettings = {
     databaseURL: "https://practice-project-67991-default-rtdb.firebaseio.com/"
 }
@@ -9,11 +9,20 @@ const database = getDatabase(app)
 const groceriesInDB = ref(database, "groceries")
 
 onValue(groceriesInDB, function(snapshot) {
-    clearShoppingListEl()
-    let groceriesArray = Object.values(snapshot.val())
-    groceriesArray.reverse();
-    for (const grocery of groceriesArray){
-        createShoppingListItem(grocery)
+    
+    if(snapshot.exists()){
+        clearShoppingListEl()
+        // 
+        let groceriesArray = Object.entries(snapshot.val())
+        const currentItemID = Object.keys(snapshot.val())
+        const currentItemVal = Object.values(snapshot.val())
+        // 
+        groceriesArray.reverse();
+        for (const grocery of groceriesArray){
+            createShoppingListItem(grocery)
+        } 
+    }else {
+        shoppingListEl.innerHTML = "Shopping Cart Empty"
     }
 })
 
@@ -25,7 +34,16 @@ function clearInput(inputElement){
     inputElement.value = ''
 }
 function createShoppingListItem(itemValue){
-    shoppingListEl.innerHTML += `<li class="shopping-list-item">${itemValue}</li>`
+    // shoppingListEl.innerHTML += `<li class="shopping-list-item">${itemValue}</li>`
+    let newEl = document.createElement('li')
+    newEl.className = "shopping-list-item"
+    newEl.textContent = itemValue[1]
+    shoppingListEl.appendChild(newEl)
+    newEl.addEventListener("click", function(){
+        let exactLocationOfShoppingListItem = ref(database, `groceries/${itemValue[0]}`)
+        // alert(`Remove ${itemValue[1]} from shopping list?`)
+        remove(exactLocationOfShoppingListItem)
+    }) 
 }
 function clearShoppingListEl(){
     shoppingListEl.innerHTML = ''

@@ -33,6 +33,14 @@ button {
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+}
+button:active{
+    background-color: #9e4152;
+    color: #d2d2d2;
+    box-shadow: none;
+    margin-left: .2rem;
+    margin-top: .2rem;
+
 
 }
 img{
@@ -59,15 +67,22 @@ img{
     margin-top: 1vh;
     gap: .5rem;
     padding: 0;
-justify-content: center;}
+    justify-content: center;
+}
 .shopping-list-item{
     font-weight: bold;
-    background-color: DCE1EB;
+    background-color: #faf0ff;
     border-radius: 1vh;
     padding: .5rem;
-    color: #2f2f2f;
+    color: #4d4d4d;
     text-decoration: none;
     list-style: none;
     box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
     flex-grow: 1;
+    transition: background-color .2s ease;
+}
+.shopping-list-item:hover{
+    background-color: #dd4c4c;
+    color: #ffffff;
+    cursor: pointer;
 }
