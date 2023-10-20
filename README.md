@@ -1,6 +1,6 @@
-# Teal Lollipop Shopping Cart Mobile App
+# Peach and Goma Shopping Cart Mobile App
 
-![Teal Lollipop Logo](https://6532fe3aa3bdb7290fd2d63c--teal-lollipop-e84741.netlify.app/logo.png)
+![Peach from Peach and Goma](https://i.imgur.com/HCN3oOz.png)
 
 Welcome to the Teal Lollipop Shopping Cart mobile app! This simple and cute shopping cart app is built with Firebase and basic web development utilities to provide you with a functional and enjoyable shopping list creating experience.
 
