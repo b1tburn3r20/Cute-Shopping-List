@@ -4,6 +4,16 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     background-color: #f6e7ff;
+    user-select: none;
+
+}
+header{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+span{
+    background-color: white;
 }
 input{
     color: #432000;
@@ -21,7 +31,7 @@ input{
 }
 button {
     color: #FDFDFD;
-    background-color: #AC485A;
+    background-color: #56a6e7;
     display: flex;
     border: none;
     outline: none;
@@ -33,9 +43,13 @@ button {
     font-size: 1rem;
     font-weight: bold;
     box-shadow: 2px 3px rgba(0, 0, 0, 0.2);
+    transition: all .3s ease;
+    margin-bottom: 1vh;
+    /* text-shadow: 1px 1px 2px rgba(0, 0, 0, .6); */
 }
+
 button:active{
-    background-color: #9e4152;
+    background-color: #3c729e;
     color: #d2d2d2;
     box-shadow: none;
     margin-left: .2rem;
@@ -53,18 +67,40 @@ img{
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    max-width: 350px;
+    max-width: 300px;
     justify-content: center;
     text-align: center;
     align-items: center;
     margin: 0 auto;
     background-color: white;
+    margin-top: 1vh;
+}
+.header-span-1{
+    font-size: 2rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.4);
+
+}
+.header-span-2{
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.peach-name{
+    color: #f8a999;
+}
+.goma-name{
+    color: #c1b8b1;
 }
 #shopping-list{
+    width: 100%;
+    border-top: dashed 3px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-wrap: wrap;
     background-color: white;
     margin-top: 1vh;
+    padding-top: 1.5vh !important;
     gap: .5rem;
     padding: 0;
     justify-content: center;
@@ -81,8 +117,7 @@ img{
     flex-grow: 1;
     transition: background-color .2s ease;
 }
-.shopping-list-item:hover{
-    background-color: #dd4c4c;
-    color: #ffffff;
-    cursor: pointer;
+
+.shopping-list-item:active{
+    background-color:#c24141;
 }
